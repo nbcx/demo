@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+</head>
+<body>
+<form>
+    <!-- \nb\Request 对象属性输出-->
+    <h1>当前IP：{$Request.ip}</h1>
+    <!-- 常量输出 -->
+    <h1>当前版本：{$NB.__VER__}</h1>
+    <div>
+        <spam>user</spam>
+        <input type="text" name="user" value="{$NB.request.user}">
+    </div>
+    <div>
+        <button type="submit">提交</button>
+    </div>
+</form>
+</body>
+</html>

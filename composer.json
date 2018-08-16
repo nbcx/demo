@@ -1,19 +1,18 @@
 {
-  "name": "nbcx/demo",
+  "name": "nb/demo",
   "description": "the framework demo",
   "type": "project",
   "keywords": [
     "framework",
-    "thinkphp",
-    "ORM"
+    "nb",
+    "swoole"
   ],
   "minimum-stability": "dev",
-  "repositories":[
-    {"type":"git","url":"https://git.coding.net/cxmvc/nbtest.git"}
-  ],
   "require": {
-    "nbcx/nbtest": "dev-master",
     "nbcx/framework": "dev-master"
+  },
+  "require-dev": {
+    "wudi/swoole-ide-helper": "dev-master"
   },
   "extra": {
     "nb-path": "nb"
