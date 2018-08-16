@@ -1,0 +1,3 @@
+[submodule "nb"]
+	path = nb
+	url = https://github.com/nbcx/framework.git
