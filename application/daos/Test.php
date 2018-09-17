@@ -20,7 +20,7 @@ use nb\Dao;
 class Test extends Dao {
 
     public function __construct() {
-        parent::__construct('test t','id','dao');
+        parent::__construct('user u','id','dao');
     }
 
     public function test() {
@@ -28,5 +28,20 @@ class Test extends Dao {
         $this->find('name=?','张三');
 
         $this->find('name=? and age>?',['张三',17]);
+    }
+
+    //数据库事务测试
+    public function transaction($submit=false) {
+
+        $this->beginTransaction();
+
+        $this->insert([
+            'name'=>'张'.rand(10,19),
+            'age'=>rand(10,19)
+        ]);
+        //提交或回滚
+        //$this->commit();
+        $this->rollback();
+
     }
 }
