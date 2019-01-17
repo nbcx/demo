@@ -19,7 +19,7 @@ use nb\Controller;
  */
 class Control extends Controller {
 
-    protected $rule = [
+    protected $_rule = [
         'name'  =>  'require|max:25',
         'age'   => 'number|between:1,120',
         'email' =>  'email',
@@ -27,7 +27,7 @@ class Control extends Controller {
 
     //直接在验证器类中使用message属性定义错误提示信息
     //如果没有定义错误提示信息，则使用系统默认的提示信息
-    protected $message  =   [
+    protected $_message  =   [
         'name.require' => '名称必须',
         'name.max'     => '名称最多不能超过25个字符',
         'age.number'   => '年龄必须是数字',
