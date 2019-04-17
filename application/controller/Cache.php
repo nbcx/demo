@@ -22,6 +22,13 @@ class Cache extends Controller {
         $this->display();
     }
 
+    public function test() {
+        echo \nb\Cache::getx('_delete',function () {
+            return rand(10,100);
+        });
+        \nb\Cache::delete('_delete');
+    }
+
     public function start() {
 
         echo 'success';
